@@ -2,6 +2,8 @@ import { SignedIn, UserButton } from "@clerk/nextjs";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Theme from "./Theme";
+import MobileNav from "./MobileNav";
 
 function Navbar() {
   return (
@@ -12,7 +14,7 @@ function Navbar() {
           src="/assets/images/site-logo.svg"
           width={23}
           height={23}
-          alt="Dodoflow"
+          alt="DodoFlow"
         />
 
         <p className="h2-bold font-spaceGrotesk text-dark-100 dark:text-light-900 max-sm:hidden">
@@ -21,7 +23,7 @@ function Navbar() {
       </Link>
       GlobalSearch
       <div className="flex-between gap-5">
-        Theme
+        <Theme />
         <SignedIn>
           <UserButton
             afterSignOutUrl="/"
@@ -35,7 +37,7 @@ function Navbar() {
             }}
           />
         </SignedIn>
-        MobileNav
+        <MobileNav />
       </div>
     </nav>
   );
