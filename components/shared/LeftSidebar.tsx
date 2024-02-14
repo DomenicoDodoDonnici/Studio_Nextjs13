@@ -1,7 +1,7 @@
 "use client";
 
 import { sidebarLinks } from "@/constants";
-import { Link } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
@@ -39,7 +39,9 @@ function LeftSidebar() {
                 className={`${isActive ? "" : "invert-colors"}`}
               />
               <p
-                className={`${isActive ? "base-bold" : "base-medium"} max-lg:hidden`}
+                className={`${
+                  isActive ? "base-bold" : "base-medium"
+                } max-lg:hidden`}
               >
                 {item.label}
               </p>
@@ -54,7 +56,7 @@ function LeftSidebar() {
             <Button className="small-medium btn-secondary min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
               <Image
                 src="/assets/icons/account.svg"
-                alt="Login"
+                alt="sign in"
                 width={20}
                 height={20}
                 className="invert-colors lg:hidden"
@@ -66,10 +68,10 @@ function LeftSidebar() {
           </Link>
 
           <Link href="/sign-up">
-            <Button className="small-medium light-border-2 btn-tertiary text-dark400_light900 min-h-[41px] w-full rounded-lg border px-4 py-3 shadow-none">
+            <Button className="small-medium light-border-2 btn-tertiary text-dark400_light900 min-h-[41px] w-full rounded-lg px-4 py-3 shadow-none">
               <Image
                 src="/assets/icons/sign-up.svg"
-                alt="Sign Up"
+                alt="sign up"
                 width={20}
                 height={20}
                 className="invert-colors lg:hidden"
